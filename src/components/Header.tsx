@@ -9,7 +9,7 @@ export default component$(() => {
         </a>
         <nav class="hidden md:flex gap-6 text-sm">
           <a href="#solucao" class="text-slate-600 hover:text-slate-900">Como funciona</a>
-          <a href="#beneficios" class="text-slate-600 hover:text-slate-900">Benefícios</a>
+          <a href="#beneficios" class="text-slate-600 hover:text-slate-900">Seu catalogo online</a>
           <a href="#prova-social" class="text-slate-600 hover:text-slate-900">Quem já usa</a>
         </nav>
         <div>
