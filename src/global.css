@@ -29,6 +29,18 @@ body {
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 	background: transparent;
+	/* Ensure anchor links land below the sticky header */
+	scroll-margin-top: calc(var(--header-height) + 0.75rem);
+}
+
+/* Create an invisible offset target before each section so anchors and hash links
+   are not covered by the sticky header while preserving visual spacing */
+.section::before {
+	content: "";
+	display: block;
+	height: var(--header-height);
+	margin-top: calc(-1 * var(--header-height));
+	visibility: hidden;
 }
 
 .section + .section { border-top: 1px solid rgba(15,23,42,0.04); }
