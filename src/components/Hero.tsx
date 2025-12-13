@@ -6,12 +6,12 @@ export default component$(() => {
       <div class="max-w-5xl mx-auto px-6 sm:px-12 py-20 text-center">
         <div class="flex items-center justify-center gap-4">
           <div class="w-14 h-14 bg-white/20 rounded flex items-center justify-center">MH</div>
-          <h1 class="text-4xl sm:text-5xl font-extrabold">Magichub</h1>
+          <h1 class="text-4xl sm:text-5xl font-extrabold">minhavitrineonline</h1>
         </div>
         <p class="mt-4 text-lg">Digitalize seu comércio, aumente vendas e simplifique operações — trial gratuito.</p>
         <div class="mt-8 flex justify-center gap-4">
           <a
-            href="mailto:contato@magichub.com?subject=Agendar%20demo%20Magichub"
+            href="mailto:contato@minhavitrineonline.com?subject=Agendar%20demo%20minhavitrineonline"
             class="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded"
           >
             Agendar demo
