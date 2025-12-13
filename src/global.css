@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+    --brand: #00C4CC;
+}
 
 :root {
 	--brand: #0b74d1;
@@ -12,8 +11,8 @@
 	--bg: #ffffff;
 	--surface: #f8fafc;
 	--muted: #64748b;
-	--accent: #0b74d1;
-	--accent-600: #075ca8;
+	--accent: #00C4CC;
+	--accent-600: #009ca3;
 	--radius: 12px;
 	--header-height: 64px;
 }
