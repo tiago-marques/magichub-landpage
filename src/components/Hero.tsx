@@ -8,7 +8,7 @@ export default component$(() => {
           <div class="w-14 h-14 bg-white/20 rounded flex items-center justify-center">MH</div>
           <h1 class="text-4xl sm:text-5xl font-extrabold">minhavitrineonline</h1>
         </div>
-        <p class="mt-4 text-lg">Digitalize seu comércio, aumente vendas e simplifique operações — trial gratuito.</p>
+        <p class="mt-4 text-lg">Transforme sua loja física em uma vitrine online com catálogo digital automático.</p>
         <div class="mt-8 flex justify-center gap-4">
           <a
             href="mailto:contato@minhavitrineonline.com?subject=Agendar%20demo%20minhavitrineonline"

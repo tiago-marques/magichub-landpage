@@ -17,7 +17,7 @@ import Lembrete from '../components/sections/Lembrete';
 
 export default component$(() => {
   return (
-    <main class="min-h-screen bg-white text-slate-900">
+    <main class="min-h-screen bg-white text-[var(--text)]">
       <Header />
       <Hero />
 
@@ -34,7 +34,7 @@ export default component$(() => {
       <Aviso />
       <Lembrete />
 
-      <footer class="border-t mt-12 py-8 text-center text-sm text-slate-500">
+      <footer class="border-t mt-12 py-8 text-center text-sm text-[var(--muted)]">
         © {new Date().getFullYear()} minhavitrineonline — Estamos digitalizando comércios.
       </footer>
     </main>
