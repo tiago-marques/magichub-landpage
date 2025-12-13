@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 :root {
-	--brand: #00C4CC;
+	--brand: #0b74d1;
 	--bg: #ffffff;
 	--surface: #f8fafc;
 	--muted: #64748b;
-	--accent: #00C4CC;
-	--accent-600: #008f93;
+	--accent: #0b74d1;
+	--accent-600: #075ca8;
 	--radius: 12px;
 	--header-height: 72px;
 }
