@@ -3,10 +3,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#00C4CC',
+        primary: '#0b74d1',
         brand: {
-          DEFAULT: '#00C4CC',
-          light: '#66e6e9'
+          DEFAULT: '#0b74d1',
+          light: '#3da3ff'
         }
       },
       fontFamily: {

@@ -66,7 +66,7 @@ Development mode uses [Vite's development server](https://vitejs.dev/). The `dev
 ```shell
 # Magichub — Landpage (Qwik)
 
-Landpage para o MVP do `MinhaVitrineOnline` — template criado com Qwik City e Tailwind.
+Landpage para o MVP do `minhavitrineonline` — template criado com Qwik City e Tailwind.
 
 Setup local
 

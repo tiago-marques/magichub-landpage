@@ -35,7 +35,7 @@ export default component$(() => {
       <Lembrete />
 
       <footer class="border-t mt-12 py-8 text-center text-sm text-slate-500">
-        © {new Date().getFullYear()} MinhaVitrineOnline — Estamos digitalizando comércios.
+        © {new Date().getFullYear()} minhavitrineonline — Estamos digitalizando comércios.
       </footer>
     </main>
   );
