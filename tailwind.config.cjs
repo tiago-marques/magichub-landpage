@@ -3,11 +3,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0b74d1',
-        brand: {
-          DEFAULT: '#0b74d1',
-          light: '#3da3ff'
-        }
+          primary: '#00C4CC',
+          brand: {
+            DEFAULT: '#00C4CC',
+            light: '#66e6e9'
+          }
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto']

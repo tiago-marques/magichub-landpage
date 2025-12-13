@@ -2,7 +2,7 @@ import { component$ } from '@builder.io/qwik';
 
 export default component$(() => {
   return (
-    <header class="bg-gradient-to-r from-blue-600 to-blue-500 text-white">
+    <header class="bg-gradient-to-r from-brand to-brand-light text-white">
       <div class="max-w-5xl mx-auto px-6 sm:px-12 py-20 text-center">
         <div class="flex items-center justify-center gap-4">
           <div class="w-14 h-14 bg-white/20 rounded flex items-center justify-center">MH</div>
@@ -12,7 +12,7 @@ export default component$(() => {
         <div class="mt-8 flex justify-center gap-4">
           <a
             href="mailto:contato@minhavitrineonline.com?subject=Agendar%20demo%20minhavitrineonline"
-            class="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded"
+            class="inline-block bg-white text-primary font-semibold px-6 py-3 rounded"
           >
             Agendar demo
           </a>
