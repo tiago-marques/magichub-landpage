@@ -43,23 +43,30 @@ npm run qwik add # or `yarn qwik add`
 Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
 
 ```shell
-npm start # or `yarn start`
+# Magichub — Landpage (Qwik)
+
+Landpage para o MVP do `Magichub` — template criado com Qwik City e Tailwind.
+
+Setup local
+
+```bash
+npm install
+npm run dev
 ```
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
+Build para GitHub Pages
 
-## Preview
-
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
-
-```shell
-npm run preview # or `yarn preview`
+```bash
+# Constrói o site e copia a saída para `docs/` (pasta usada pelo GitHub Pages)
+npm run build && cp -r dist docs || true
+# Depois commit/push e habilite GitHub Pages apontando para a pasta `docs/` na branch `main`.
 ```
 
-## Production
+Personalização
 
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
+- Edite `src/routes/index.tsx` para alterar textos e placeholders.
+- Edite `src/global.css` e `tailwind.config.cjs` para ajustar cores e tipografia.
 
-```shell
-npm run build # or `yarn build`
-```
+Assets
+
+- Placeholders SVG estão em `src/assets/`.

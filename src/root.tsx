@@ -16,6 +16,9 @@ export default component$(() => {
     <QwikCityProvider>
       <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         {!isDev && (
           <link
             rel="manifest"
@@ -24,7 +27,7 @@ export default component$(() => {
         )}
         <RouterHead />
       </head>
-      <body lang="en">
+      <body lang="pt-BR" class="font-sans">
         <RouterOutlet />
       </body>
     </QwikCityProvider>
