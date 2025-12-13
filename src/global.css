@@ -1,20 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 :root {
 	--brand: #00C4CC;
-}
-
-:root {
-	--brand: #0b74d1;
-}
-
-:root {
 	--bg: #ffffff;
 	--surface: #f8fafc;
 	--muted: #64748b;
 	--accent: #00C4CC;
 	--accent-600: #008f93;
 	--radius: 12px;
-	--header-height: 64px;
+	--header-height: 72px;
 }
 
 html, body, #root, #app { height: 100%; }
@@ -75,12 +68,23 @@ body {
 
 .badge {
 	display: inline-block;
-	background: rgba(11,116,209,0.12);
+	background: rgba(0,196,204,0.12);
 	color: var(--accent);
 	padding: 0.25rem 0.5rem;
 	border-radius: 999px;
 	font-weight: 600;
 	font-size: 0.875rem;
+}
+
+/* Ensure fixed header has a defined height matching the body spacer */
+header.fixed {
+	height: var(--header-height);
+}
+
+header.fixed > div {
+	height: 100%;
+	display: flex;
+	align-items: center;
 }
 
 @media (min-width: 640px) {
