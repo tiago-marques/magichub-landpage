@@ -5,7 +5,7 @@ export default component$(() => {
     <header class="fixed inset-x-0 top-0 bg-white z-50 shadow-sm">
       <div class="max-w-6xl mx-auto px-6 sm:px-12 py-4 flex items-center justify-between">
         <a href="/" class="flex items-center gap-3">
-          <img src="/src/assets/logo.svg" alt="MinhaVitrineOnline" class="h-8" />
+          <img src="/src/assets/logo.png" alt="MinhaVitrineOnline" class="h-8" />
         </a>
         <nav class="hidden md:flex gap-6 text-sm">
           <a href="#solucao" class="text-slate-600 hover:text-slate-900">Como funciona</a>
