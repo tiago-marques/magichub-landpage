@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+# Qwik City App ⚡️
+
+- [Qwik Docs](https://qwik.dev/)
+- [Discord](https://qwik.dev/chat)
+- [Qwik GitHub](https://github.com/QwikDev/qwik)
+- [@QwikDev](https://twitter.com/QwikDev)
+- [Vite](https://vitejs.dev/)
+
+---
+
+## Project Structure
+
+This project is using Qwik with [QwikCity](https://qwik.dev/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+
+Inside your project, you'll see the following directory structure:
+
+```
+├── public/
+│   └── ...
+````markdown
 # Qwik City App ⚡️
 
 - [Qwik Docs](https://qwik.dev/)
@@ -70,3 +91,5 @@ Personalização
 Assets
 
 - Placeholders SVG estão em `src/assets/`.
+
+````
