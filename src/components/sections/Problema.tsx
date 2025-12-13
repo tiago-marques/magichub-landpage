@@ -2,7 +2,7 @@ import { component$ } from '@builder.io/qwik';
 import Section from '../Section';
 
 export default component$(() => (
-  <Section title="2. Identifique o problema" id="problema">
+  <Section id="problema" fullScreen>
     <p class="lead">Você vende bem na loja, mas:</p>
     <ul class="list-disc pl-5 space-y-2 section-content">
       <li>Seus produtos não aparecem no Google</li>

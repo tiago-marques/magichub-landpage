@@ -11,7 +11,7 @@ export default component$(() => {
         <p class="mt-4 text-lg">Transforme sua loja física em uma vitrine online com catálogo digital automático.</p>
         <div class="mt-8 flex justify-center gap-4">
           <a
-            href="mailto:contato@minhavitrineonline.com?subject=Agendar%20demo%20minhavitrineonline"
+            href="mailto:contato@minhavitrineonline.com.br?subject=Agendar%20demo%20minhavitrineonline"
             class="inline-block bg-white text-primary font-semibold px-6 py-3 rounded"
           >
             Agendar demo

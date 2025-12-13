@@ -13,7 +13,7 @@ export default component$(() => {
           <a href="#prova-social" class="text-[var(--muted)] hover:text-[var(--text)]">Quem já usa</a>
         </nav>
         <div>
-          <a href="mailto:contato@minhavitrineonline.com?subject=Agendar%20demo%20minhavitrineonline" class="bg-brand text-white px-4 py-2 rounded">Agendar demo</a>
+          <a href="mailto:contato@minhavitrineonline.com.br?subject=Agendar%20demo%20minhavitrineonline" class="bg-brand text-white px-4 py-2 rounded">Agendar demo</a>
         </div>
       </div>
     </header>

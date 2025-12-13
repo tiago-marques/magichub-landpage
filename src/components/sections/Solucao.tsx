@@ -2,7 +2,7 @@ import { component$ } from '@builder.io/qwik';
 import Section from '../Section';
 
 export default component$(() => (
-  <Section title="3. Apresente a solução" id="solucao">
+  <Section id="solucao" fullScreen>
     <p class="lead">A minhavitrineonline cria seu catálogo digital automaticamente a partir das suas notas fiscais (NFe).</p>
 
     <ul class="list-disc pl-5 space-y-2 section-content">
