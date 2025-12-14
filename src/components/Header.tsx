@@ -1,4 +1,5 @@
 import { component$ } from '@builder.io/qwik';
+import LogoPng from '~/assets/logo.png?jsx';
 //Como funciona | Benefícios | Quem já usa
 export default component$(() => {
   return (
@@ -9,7 +10,7 @@ export default component$(() => {
         <a href="/" class="flex items-center gap-3 group">
           <div class="relative">
             <div class="absolute inset-0 bg-[var(--accent)]/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-            <img src="/src/assets/logo.png" alt="MinhaVitrineOnline" class="h-12 md:h-16 relative transition-transform duration-300 group-hover:scale-105" />
+            <LogoPng class="h-12 w-12 md:h-14 md:w-14 object-contain relative transition-transform duration-300 group-hover:scale-105" alt="MinhaVitrineOnline" />
           </div>
         </a>
         
