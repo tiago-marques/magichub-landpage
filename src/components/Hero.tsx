@@ -65,7 +65,7 @@ export default component$(() => {
             href="#oferta" 
             class="inline-flex items-center justify-center gap-2 bg-white/80 backdrop-blur-sm border-2 border-gray-300 px-8 py-4 text-gray-700 font-semibold rounded-xl hover:bg-white hover:border-[var(--accent)] transition-all duration-300"
           >
-            <span>Ver Planos</span>
+            <span>Ver plano gratuito</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
