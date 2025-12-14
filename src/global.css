@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap');
+/* Font import movido para root.tsx com otimizações de performance */
 
 @tailwind base;
 @tailwind components;
@@ -28,6 +28,10 @@ body {
 	font-family: var(--font-body);
 	background: var(--page-bg);
 	color: var(--text);
+	/* Otimização de renderização de texto */
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, .section-heading {
@@ -47,6 +51,9 @@ h1, h2, h3, h4, .section-heading {
 	background: transparent;
 	/* Ensure anchor links land below the sticky header */
 	scroll-margin-top: calc(var(--header-height) + 0.75rem);
+	/* Otimização de renderização - content-visibility para melhor performance */
+	content-visibility: auto;
+	contain-intrinsic-size: auto 500px;
 }
 
 /* Create an invisible offset target before each section so anchors and hash links
@@ -104,10 +111,13 @@ h1, h2, h3, h4, .section-heading {
 	transition: all 0.3s ease;
 	position: relative;
 	overflow: hidden;
+	/* Otimização de performance para animações */
+	will-change: transform;
+	transform: translateZ(0);
 }
 
 .btn-primary:hover {
-	transform: scale(1.05);
+	transform: scale(1.05) translateZ(0);
 	box-shadow: 0 10px 40px rgba(0, 196, 204, 0.35);
 }
 

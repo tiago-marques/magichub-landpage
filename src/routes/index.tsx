@@ -1,4 +1,5 @@
 import { component$ } from '@builder.io/qwik';
+import type { DocumentHead } from '@builder.io/qwik-city';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 
@@ -40,3 +41,49 @@ export default component$(() => {
     </main>
   );
 });
+
+// Meta tags otimizadas para SEO e Performance
+export const head: DocumentHead = {
+  title: 'MinhaVitrineOnline - Catálogo Digital Automático para Pequenos Lojistas',
+  meta: [
+    {
+      name: 'description',
+      content: 'Crie seu catálogo digital automático e venda mais sem complicação. Para pequenos lojistas que querem aparecer no Google e WhatsApp.',
+    },
+    {
+      name: 'keywords',
+      content: 'catálogo digital, vitrine online, loja virtual, pequenos lojistas, Google Meu Negócio, WhatsApp Business',
+    },
+    // Open Graph / Facebook
+    {
+      property: 'og:type',
+      content: 'website',
+    },
+    {
+      property: 'og:title',
+      content: 'MinhaVitrineOnline - Catálogo Digital Automático',
+    },
+    {
+      property: 'og:description',
+      content: 'Crie seu catálogo digital automático e venda mais sem complicação.',
+    },
+    // Twitter
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      name: 'twitter:title',
+      content: 'MinhaVitrineOnline - Catálogo Digital Automático',
+    },
+    {
+      name: 'twitter:description',
+      content: 'Crie seu catálogo digital automático e venda mais sem complicação.',
+    },
+    // Performance hints
+    {
+      name: 'theme-color',
+      content: '#00C4CC',
+    },
+  ],
+};

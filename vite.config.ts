@@ -23,6 +23,26 @@ export default defineConfig(({ command, mode }): UserConfig => {
   return {
     base: mode === 'production' ? '/magichub-landpage/' : '/',
     plugins: [qwikCity(), qwikVite(), tsconfigPaths({ root: "." })],
+    
+    // Otimizações de build para produção
+    build: {
+      // Minificação agressiva com terser para melhor compressão
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: mode === 'production', // Remove console.log em produção
+          drop_debugger: true,
+          pure_funcs: mode === 'production' ? ['console.log', 'console.info', 'console.debug'] : [],
+        },
+      },
+      // Chunk size warnings
+      chunkSizeWarningLimit: 1000,
+      // Otimizar CSS
+      cssMinify: true,
+      // Source maps apenas em dev
+      sourcemap: mode !== 'production',
+    },
+    
     // This tells Vite which dependencies to pre-build in dev mode.
     optimizeDeps: {
       // Put problematic deps that break bundling here, mostly those with binaries.

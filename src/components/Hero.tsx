@@ -32,6 +32,9 @@ export default component$(() => {
               src={slogan}
               class="relative max-w-full h-40 md:h-52 lg:h-64 w-auto object-contain drop-shadow-2xl"
               alt="MinhaVitrineOnline"
+              width="512"
+              height="256"
+              fetchPriority="high"
             />
           </div>
         </div>

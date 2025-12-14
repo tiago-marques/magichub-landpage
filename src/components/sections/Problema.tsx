@@ -63,10 +63,15 @@ export default component$(() => {
                 <div class="h-1 flex-1 rounded-full bg-gradient-to-r from-red-400/50 to-orange-400/50" />
               </div>
               <div class="relative mb-4 rounded-xl overflow-hidden shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                {/* Lazy loading e dimensões para otimizar performance */}
                 <img
                   src={p.img}
                   alt={`problema-${idx + 1}`}
                   class="w-full h-44 object-cover"
+                  width="400"
+                  height="176"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>

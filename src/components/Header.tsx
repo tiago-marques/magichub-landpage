@@ -10,7 +10,8 @@ export default component$(() => {
         <a href="/" class="flex items-center gap-3 group">
           <div class="relative">
             <div class="absolute inset-0 bg-[var(--accent)]/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-            <img src={LogoPng} class="h-12 w-12 md:h-14 md:w-14 object-contain relative transition-transform duration-300 group-hover:scale-105" alt="MinhaVitrineOnline" width="56" height="56" />
+            {/* Dimensões explícitas para evitar Layout Shift (CLS) */}
+            <img src={LogoPng} class="h-12 w-12 md:h-14 md:w-14 object-contain relative transition-transform duration-300 group-hover:scale-105" alt="MinhaVitrineOnline" width="56" height="56" fetchPriority="high" />
           </div>
         </a>
         
