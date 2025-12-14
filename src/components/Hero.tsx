@@ -5,8 +5,8 @@ import slogan from '../assets/slogan.webp';
 export default component$(() => {
   return (
     <header class="relative bg-gradient-to-br from-slate-50 via-blue-50 to-white overflow-hidden min-h-screen flex items-center">
-      {/* Background Pattern */}
-      <div class="absolute inset-0 overflow-hidden opacity-20 pointer-events-none">
+      {/* Background Pattern - Oculto em mobile para melhorar Speed Index */}
+      <div class="hidden md:block absolute inset-0 overflow-hidden opacity-20 pointer-events-none">
         <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="hero-grid" width="60" height="60" patternUnits="userSpaceOnUse">
@@ -27,7 +27,7 @@ export default component$(() => {
         {/* Logo/Slogan animado */}
         <div class="flex items-center justify-center gap-4 mb-8">
           <div class="relative" style="max-width: 512px; width: 100%;">
-            <div class="absolute inset-0 bg-gradient-to-r from-[var(--accent)] to-blue-500 blur-2xl opacity-30 rounded-full slow-connection:hidden"></div>
+            <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-[var(--accent)] to-blue-500 blur-2xl opacity-30 rounded-full slow-connection:hidden"></div>
             <img
               src={slogan}
               class="hero-img relative max-w-full w-full h-auto object-contain drop-shadow-2xl"

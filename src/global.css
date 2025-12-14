@@ -86,6 +86,52 @@ img {
 	margin: 0 auto;
 }
 
+/* Otimizações específicas para mobile - melhora Speed Index */
+@media (max-width: 768px) {
+	/* Simplificar efeitos visuais em mobile */
+	.is-mobile .drop-shadow-2xl {
+		filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+	}
+	
+	/* Reduzir complexidade de gradientes em mobile */
+	.is-mobile .bg-gradient-to-br,
+	.is-mobile .bg-gradient-to-r {
+		background: var(--page-bg);
+	}
+	
+	/* Desabilitar animações complexas em mobile para renderização mais rápida */
+	.is-mobile .slow-connection:hidden {
+		display: none !important;
+	}
+	
+	/* Simplificar sombras e efeitos em mobile */
+	.is-mobile .shadow-2xl,
+	.is-mobile .shadow-xl {
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	}
+	
+	.is-mobile .shadow-lg {
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	}
+	
+	.is-mobile .shadow-md {
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+	}
+	
+	/* Remover backdrop-blur em mobile para melhor performance */
+	.is-mobile .backdrop-blur-md,
+	.is-mobile .backdrop-blur-sm,
+	.is-mobile .backdrop-blur-lg {
+		backdrop-filter: none !important;
+		-webkit-backdrop-filter: none !important;
+	}
+	
+	/* Simplificar transições em mobile */
+	.is-mobile * {
+		transition-duration: 150ms !important;
+	}
+}
+
 h1, h2, h3, h4, .section-heading {
 	font-family: var(--font-heading);
 }

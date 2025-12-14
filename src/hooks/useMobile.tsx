@@ -68,7 +68,7 @@ export const useSlowConnection = () => {
   
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(() => {
-    // @ts-ignore - NetworkInformation não tem tipos completos
+    // @ts-expect-error - NetworkInformation não tem tipos completos
     const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
     
     if (connection) {
