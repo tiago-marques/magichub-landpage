@@ -69,6 +69,7 @@ export default component$<PictureProps>(({
         loading={loading}
         fetchPriority={fetchPriority}
         decoding={decoding}
+        style={width && height ? `aspect-ratio: ${width}/${height}` : undefined}
       />
     </picture>
   );

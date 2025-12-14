@@ -26,17 +26,17 @@ export default component$(() => {
       <div class="max-w-6xl mx-auto px-6 sm:px-12 py-20 text-center relative z-10">
         {/* Logo/Slogan animado */}
         <div class="flex items-center justify-center gap-4 mb-8">
-          <div class="relative">
+          <div class="relative" style="max-width: 512px; width: 100%;">
             <div class="absolute inset-0 bg-gradient-to-r from-[var(--accent)] to-blue-500 blur-2xl opacity-30 rounded-full slow-connection:hidden"></div>
             <img
               src={slogan}
-              class="relative max-w-full h-40 md:h-52 lg:h-64 w-auto object-contain drop-shadow-2xl"
+              class="hero-img relative max-w-full w-full h-auto object-contain drop-shadow-2xl"
               alt="MinhaVitrineOnline - Catálogo Digital Automático"
               width="512"
               height="256"
               fetchPriority="high"
               decoding="async"
-              style="content-visibility: auto;"
+              style="aspect-ratio: 2/1; content-visibility: auto;"
             />
           </div>
         </div>

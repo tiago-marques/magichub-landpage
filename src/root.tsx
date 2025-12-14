@@ -18,10 +18,17 @@ export default component$(() => {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Preload da imagem hero para melhorar LCP mobile */}
+        <link rel="preload" as="image" href="/magichub-landpage/assets/slogan.webp" fetchPriority="high" />
+        {/* Preload do logo para reduzir CLS */}
+        <link rel="preload" as="image" href="/magichub-landpage/assets/logo.webp" fetchPriority="high" />
         {/* Otimização de fontes: preconnect + dns-prefetch + font-display:swap */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        {/* Preload de fontes críticas para reduzir CLS */}
+        <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" crossOrigin="" />
+        <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2" crossOrigin="" />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
@@ -37,6 +44,15 @@ export default component$(() => {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
           />
         </noscript>
+        {/* CSS crítico inline para reduzir CLS */}
+        <style dangerouslySetInnerHTML={`
+          :root{--brand:#00C4CC;--bg:#fff;--page-bg:#fdfdfd;--surface:#f8fafc;--muted:#64748b;--accent:#00C4CC;--accent-600:#008f93;--radius:12px;--header-height:72px;--text:#0F172A;--font-body:'Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;--font-heading:'Montserrat','Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}
+          *{margin:0;padding:0;box-sizing:border-box}
+          body{font-family:var(--font-body);background:var(--page-bg);color:var(--text);margin:0;line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-tap-highlight-color:rgba(0,196,204,0.2);touch-action:manipulation;-webkit-text-size-adjust:100%}
+          img{max-width:100%;height:auto;display:block}
+          .hero-img{aspect-ratio:2/1;width:100%;max-width:512px;height:auto;margin:0 auto}
+          .container{max-width:72rem;margin:0 auto;padding:0 1.5rem}
+        `} />
         {/* Swiper CSS - carregado via CDN para evitar problemas de build */}
         <link 
           rel="stylesheet" 
