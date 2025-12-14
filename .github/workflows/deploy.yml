@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build.client
+        run: npm run build.static
         env:
           NODE_ENV: production
 
@@ -42,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./dist/magichub-landpage
 
   deploy:
     environment:
