@@ -23,24 +23,21 @@ Este documento detalha todas as melhorias de performance aplicadas no projeto **
 // ✅ Adicionado dns-prefetch para resolver DNS mais rápido
 <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 
-// ✅ Carregamento assíncrono de fontes com fallback
+// ✅ Font com display:swap direto na URL
 <link
   rel="stylesheet"
-  href="...&display=swap"  // font-display: swap
-  media="print"             // Carrega assincronamente
-  onLoad="this.media='all'" // Ativa após carregar
+  href="...&display=swap"
 />
 
-// ✅ Fallback para usuários sem JavaScript
-<noscript>
-  <link rel="stylesheet" href="..." />
-</noscript>
+// ✅ CSS do Swiper via CDN para evitar problemas de build
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 ```
 
 **Impacto:**
 - ⚡ Redução de 200-500ms no First Contentful Paint (FCP)
-- ✨ Elimina FOIT (Flash of Invisible Text)
+- ✨ Font-display:swap elimina FOIT (Flash of Invisible Text)
 - 📊 Melhora no score de Performance (+5 a +10 pontos)
+- 🔧 Build mais estável (sem imports de CSS problemáticos)
 
 ---
 
@@ -144,17 +141,16 @@ export const head: DocumentHead = {
 **Melhorias:**
 ```typescript
 build: {
-  minify: 'terser',  // ✅ Minificação mais agressiva
-  terserOptions: {
-    compress: {
-      drop_console: true,    // ✅ Remove console.log
-      drop_debugger: true,   // ✅ Remove debugger
-      pure_funcs: ['console.log', 'console.info', 'console.debug'],
-    },
-  },
+  minify: 'esbuild',  // ✅ Minificação rápida e eficiente
   chunkSizeWarningLimit: 1000,
   cssMinify: true,             // ✅ Minifica CSS
   sourcemap: false,            // ✅ Sem sourcemaps em prod
+  // Drop console em produção via esbuild
+  ...(mode === 'production' && {
+    esbuild: {
+      drop: ['console', 'debugger'], // ✅ Remove console/debugger
+    },
+  }),
 },
 ```
 
@@ -162,6 +158,7 @@ build: {
 - 📦 Redução de ~15-25% no bundle size
 - ⚡ JavaScript execution time: -100ms a -300ms
 - 🔒 Melhor segurança (sem debug info)
+- 🚀 Build mais rápido (esbuild vs terser)
 
 ---
 

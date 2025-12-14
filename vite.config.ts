@@ -26,21 +26,20 @@ export default defineConfig(({ command, mode }): UserConfig => {
     
     // Otimizações de build para produção
     build: {
-      // Minificação agressiva com terser para melhor compressão
-      minify: 'terser',
-      terserOptions: {
-        compress: {
-          drop_console: mode === 'production', // Remove console.log em produção
-          drop_debugger: true,
-          pure_funcs: mode === 'production' ? ['console.log', 'console.info', 'console.debug'] : [],
-        },
-      },
+      // Minificação com esbuild (mais rápido e sem dependências extras)
+      minify: 'esbuild',
       // Chunk size warnings
       chunkSizeWarningLimit: 1000,
       // Otimizar CSS
       cssMinify: true,
       // Source maps apenas em dev
       sourcemap: mode !== 'production',
+      // Drop console em produção via esbuild
+      ...(mode === 'production' && {
+        esbuild: {
+          drop: ['console', 'debugger'],
+        },
+      }),
     },
     
     // This tells Vite which dependencies to pre-build in dev mode.

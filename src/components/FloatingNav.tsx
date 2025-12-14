@@ -4,6 +4,7 @@ export default component$(() => {
   const sections = useSignal<string[]>([]);
   const index = useSignal(-1);
 
+  // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(() => {
     const query = () => Array.from(document.querySelectorAll('section[id]')).map((s) => (s as HTMLElement).id);
     sections.value = query();

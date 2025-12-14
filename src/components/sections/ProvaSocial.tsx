@@ -33,9 +33,9 @@ export default component$(() => {
     if (swiperContainer.value) {
       const { default: Swiper } = await import('swiper');
       const { Autoplay, Pagination, EffectCoverflow } = await import('swiper/modules');
-      await import('swiper/css');
-      await import('swiper/css/pagination');
-      await import('swiper/css/effect-coverflow');
+      
+      // CSS é importado via link tag no head para evitar erros de build
+      // Ver global.css para estilos customizados do swiper
 
       new Swiper(swiperContainer.value, {
         modules: [Autoplay, Pagination, EffectCoverflow],
