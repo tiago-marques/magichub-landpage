@@ -1,0 +1,20 @@
+# Robots.txt para MinhaVitrineOnline
+# Otimizado para SEO e crawling eficiente
+
+User-agent: *
+Allow: /
+
+# Permitir crawling de recursos estáticos importantes
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+
+# Bloquear arquivos desnecessários
+Disallow: /server/
+Disallow: /*.map
+
+# Sitemap (atualizar com URL real quando disponível)
+Sitemap: https://tiago-marques.github.io/magichub-landpage/sitemap.xml
+
+# Crawl-delay para ser gentil com o servidor
+Crawl-delay: 1

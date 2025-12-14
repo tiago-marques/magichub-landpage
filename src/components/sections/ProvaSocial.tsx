@@ -31,61 +31,65 @@ export default component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(async () => {
     if (swiperContainer.value) {
-      const { default: Swiper } = await import('swiper');
-      const { Autoplay, Pagination, EffectCoverflow } = await import('swiper/modules');
-      
-      // CSS é importado via link tag no head para evitar erros de build
-      // Ver global.css para estilos customizados do swiper
+      try {
+        const { default: Swiper } = await import('swiper');
+        const { Autoplay, Pagination, EffectCoverflow } = await import('swiper/modules');
+        
+        // CSS é importado via link tag no head para evitar erros de build
+        // Ver global.css para estilos customizados do swiper
 
-      new Swiper(swiperContainer.value, {
-        modules: [Autoplay, Pagination, EffectCoverflow],
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        loop: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2,
-          slideShadows: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            coverflowEffect: {
-              depth: 50,
-              modifier: 1,
+        new Swiper(swiperContainer.value, {
+          modules: [Autoplay, Pagination, EffectCoverflow],
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2,
+            slideShadows: false,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              coverflowEffect: {
+                depth: 50,
+                modifier: 1,
+              },
+            },
+            640: {
+              slidesPerView: 'auto',
+              spaceBetween: 20,
+              coverflowEffect: {
+                depth: 80,
+                modifier: 1.5,
+              },
+            },
+            1024: {
+              slidesPerView: 'auto',
+              spaceBetween: 30,
+              coverflowEffect: {
+                depth: 100,
+                modifier: 2,
+              },
             },
           },
-          640: {
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-            coverflowEffect: {
-              depth: 80,
-              modifier: 1.5,
-            },
-          },
-          1024: {
-            slidesPerView: 'auto',
-            spaceBetween: 30,
-            coverflowEffect: {
-              depth: 100,
-              modifier: 2,
-            },
-          },
-        },
-      });
+        });
+      } catch (error) {
+        console.error('Erro ao inicializar Swiper:', error);
+      }
     }
   });
 
@@ -111,6 +115,7 @@ export default component$(() => {
       </p>
       
       <div class="relative max-w-6xl mx-auto py-8 animate-fade-in-delay" style="animation-delay: 0.6s;">
+        {/* Swiper Container */}
         <div ref={swiperContainer} class="swiper testimonials-swiper">
           <div class="swiper-wrapper">
             {testimonials.map((testimonial, index) => (
@@ -124,6 +129,19 @@ export default component$(() => {
           </div>
           <div class="swiper-pagination"></div>
         </div>
+        
+        {/* Fallback: Grid simples caso Swiper não inicialize */}
+        <noscript>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {testimonials.slice(0, 4).map((testimonial, index) => (
+              <Testimonial 
+                key={index}
+                quote={testimonial.quote} 
+                author={testimonial.author} 
+              />
+            ))}
+          </div>
+        </noscript>
       </div>
     </Section>
   );

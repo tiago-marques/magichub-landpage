@@ -18,7 +18,24 @@ import Lembrete from '../components/sections/Lembrete';
 
 export default component$(() => {
   return (
-    <main class="min-h-screen bg-white text-[var(--text)]">
+    <>
+      {/* Structured Data (JSON-LD) para SEO */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: 'MinhaVitrineOnline',
+        applicationCategory: 'BusinessApplication',
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'BRL',
+        },
+        operatingSystem: 'Web',
+        description: 'Catálogo digital automático para pequenos lojistas',
+        inLanguage: 'pt-BR',
+      })} />
+      
+      <main class="min-h-screen bg-white text-[var(--text)]">
       <Header />
       <Hero />
 
@@ -39,6 +56,7 @@ export default component$(() => {
         © {new Date().getFullYear()} minhavitrineonline — Estamos digitalizando comércios.
       </footer>
     </main>
+    </>
   );
 });
 
@@ -67,6 +85,10 @@ export const head: DocumentHead = {
       property: 'og:description',
       content: 'Crie seu catálogo digital automático e venda mais sem complicação.',
     },
+    {
+      property: 'og:locale',
+      content: 'pt_BR',
+    },
     // Twitter
     {
       name: 'twitter:card',
@@ -84,6 +106,23 @@ export const head: DocumentHead = {
     {
       name: 'theme-color',
       content: '#00C4CC',
+    },
+    // Mobile Web App
+    {
+      name: 'mobile-web-app-capable',
+      content: 'yes',
+    },
+    {
+      name: 'apple-mobile-web-app-capable',
+      content: 'yes',
+    },
+    {
+      name: 'apple-mobile-web-app-status-bar-style',
+      content: 'default',
+    },
+    {
+      name: 'apple-mobile-web-app-title',
+      content: 'MinhaVitrine',
     },
   ],
 };

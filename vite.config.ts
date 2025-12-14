@@ -40,6 +40,10 @@ export default defineConfig(({ command, mode }): UserConfig => {
           drop: ['console', 'debugger'],
         },
       }),
+      // Compressão de assets
+      reportCompressedSize: true,
+      // Target browsers modernos para código menor
+      target: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14'],
     },
     
     // This tells Vite which dependencies to pre-build in dev mode.

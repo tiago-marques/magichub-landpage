@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-import LogoPng from '~/assets/logo.png';
+import LogoPng from '../assets/logo.webp';
 //Como funciona | Benefícios | Quem já usa
 export default component$(() => {
   return (

@@ -25,9 +25,23 @@ export default component$(() => {
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+          media="print"
+          onLoad$={() => {
+            const link = document.querySelector('link[media="print"]');
+            if (link) link.setAttribute('media', 'all');
+          }}
         />
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+          />
+        </noscript>
         {/* Swiper CSS - carregado via CDN para evitar problemas de build */}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link 
+          rel="stylesheet" 
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
         {!isDev && (
           <link
             rel="manifest"
@@ -39,6 +53,29 @@ export default component$(() => {
       <body lang="pt-BR" class="font-sans">
         <RouterOutlet />
         <FloatingNav />
+        {/* Service Worker registration - apenas em produção */}
+        {!isDev && (
+          <script dangerouslySetInnerHTML={`
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/magichub-landpage/sw.js').catch(function(){});
+              });
+            }
+            
+            // Network Information API - adaptar qualidade baseado em conexão
+            if ('connection' in navigator) {
+              var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+              if (conn && (conn.saveData || ['slow-2g', '2g'].includes(conn.effectiveType))) {
+                document.documentElement.classList.add('slow-connection');
+              }
+            }
+            
+            // Detectar mobile para otimizações CSS
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+              document.documentElement.classList.add('is-mobile');
+            }
+          `} />
+        )}
       </body>
     </QwikCityProvider>
   );

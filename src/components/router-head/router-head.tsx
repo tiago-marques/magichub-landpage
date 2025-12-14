@@ -13,8 +13,20 @@ export const RouterHead = component$(() => {
       <title>{head.title}</title>
 
       <link rel="canonical" href={loc.url.href} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      {/* Viewport otimizado para mobile */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      
+      {/* Performance & Security Headers */}
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="format-detection" content="telephone=no" />
+      
+      {/* Mobile Web App Capable */}
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      
+      {/* Preconnect para recursos críticos já está em root.tsx */}
 
       {head.meta.map((m) => (
         <meta key={m.key} {...m} />

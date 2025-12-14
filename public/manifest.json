@@ -1,9 +1,23 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "qwik-project-name",
-  "short_name": "Welcome to Qwik",
-  "start_url": ".",
+  "name": "MinhaVitrineOnline - Catálogo Digital Automático",
+  "short_name": "MinhaVitrine",
+  "description": "Crie seu catálogo digital automático e venda mais sem complicação. Para pequenos lojistas que querem aparecer no Google e WhatsApp.",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#fff",
-  "description": "A Qwik project app."
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#00C4CC",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "shopping"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }

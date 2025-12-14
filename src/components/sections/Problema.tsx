@@ -1,10 +1,10 @@
 import { component$ } from '@builder.io/qwik';
 import Section from '../Section';
 
-import img1 from '../../assets/perto.jpg';
+import img1 from '../../assets/perto.webp';
 import img2 from '../../assets/entrega-gratis.svg';
-import img3 from '../../assets/pequena-empresa.png';
-import img4 from '../../assets/whats-2.png';
+import img3 from '../../assets/pequena-empresa.webp';
+import img4 from '../../assets/whats-2.webp';
 
 export default component$(() => {
   const problemas = [

@@ -22,7 +22,19 @@
 html, body, #root, #app { height: 100%; }
 
 /* Smooth scrolling for anchor/hash navigation */
-html { scroll-behavior: smooth; }
+html { 
+	scroll-behavior: smooth;
+}
+
+/* Otimizações mobile-first */
+@media (prefers-reduced-motion: reduce) {
+	html { scroll-behavior: auto; }
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
 
 body {
 	font-family: var(--font-body);
@@ -32,6 +44,11 @@ body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	/* Mobile optimizations */
+	-webkit-tap-highlight-color: rgba(0, 196, 204, 0.2);
+	touch-action: manipulation;
+	/* Prevenir zoom em inputs no iOS */
+	-webkit-text-size-adjust: 100%;
 }
 
 h1, h2, h3, h4, .section-heading {
@@ -94,10 +111,25 @@ h1, h2, h3, h4, .section-heading {
 	padding: 1rem;
 }
 
+/* Touch-friendly buttons para mobile */
+a, button {
+	touch-action: manipulation;
+	-webkit-tap-highlight-color: rgba(0, 196, 204, 0.2);
+}
+
+/* Tamanho mínimo touch-friendly (44x44px) */
+@media (max-width: 768px) {
+	a, button, .btn-primary, .btn-secondary {
+		min-height: 44px;
+		min-width: 44px;
+	}
+}
+
 .btn-primary {
 	display: inline-flex;
 	align-items: center;
 	gap: 0.5rem;
+	touch-action: manipulation;
 	background: linear-gradient(135deg, var(--accent) 0%, var(--accent-600) 100%);
 	color: white;
 	padding: 1rem 2rem;
@@ -343,5 +375,125 @@ h1, h2, h3, h4, .section-heading {
 	.section { padding-top: 4rem; padding-bottom: 4rem; }
 	.section-heading { font-size: 1.75rem; }
 	.lead { font-size: 1.125rem; }
+}
+
+/* ========================================
+   MOBILE PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+/* Reduzir animações em mobile para melhor performance */
+@media (max-width: 768px) {
+	/* Simplificar animações */
+	.animate-fade-in,
+	.animate-fade-in-delay {
+		animation-duration: 0.3s;
+	}
+	
+	/* Otimizar transições */
+	* {
+		transition-duration: 0.2s !important;
+	}
+	
+	/* Desabilitar hover effects (não existem em touch) */
+	.hover\:scale-105:hover,
+	.group:hover {
+		transform: none;
+	}
+	
+	/* Reduzir padding em sections para mobile */
+	.section {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+}
+
+/* iOS Safari fixes */
+@supports (-webkit-touch-callout: none) {
+	/* Fix para height 100% no iOS */
+	body {
+		min-height: -webkit-fill-available;
+	}
+	
+	/* Prevenir bounce scrolling */
+	body {
+		overscroll-behavior-y: none;
+	}
+}
+
+/* Performance: will-change para elementos animados */
+.swiper-slide,
+.floating-nav,
+[class*="transition"],
+[class*="animate"] {
+	will-change: transform, opacity;
+}
+
+/* Lazy loading: blur placeholder para imagens */
+img[loading="lazy"] {
+	background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+	background-size: 200% 100%;
+}
+
+/* Mobile-first: otimizar scroll em listas/grids horizontais */
+.horizontal-scroll,
+.swiper-wrapper {
+	-webkit-overflow-scrolling: touch;
+	scroll-snap-type: x mandatory;
+}
+
+.horizontal-scroll > *,
+.swiper-slide {
+	scroll-snap-align: start;
+}
+
+/* ========================================
+   ADAPTIVE LOADING - CONEXÃO LENTA
+   ======================================== */
+
+/* Quando detectado Save Data ou conexão lenta */
+.slow-connection img[loading="lazy"] {
+	/* Força lazy loading mais agressivo */
+	content-visibility: auto;
+}
+
+.slow-connection .animate-fade-in,
+.slow-connection .animate-fade-in-delay,
+.slow-connection [class*="transition"] {
+	/* Desabilita animações */
+	animation: none !important;
+	transition: none !important;
+}
+
+.slow-connection .blur,
+.slow-connection .shadow-2xl {
+	/* Remove efeitos pesados */
+	filter: none !important;
+	box-shadow: none !important;
+}
+
+/* ========================================
+   MOBILE-SPECIFIC OPTIMIZATIONS
+   ======================================== */
+
+/* Otimizar toque em mobile */
+.is-mobile a,
+.is-mobile button {
+	/* Aumentar área de toque */
+	padding: 0.5rem;
+	margin: -0.5rem;
+}
+
+/* Prevenir seleção acidental de texto em mobile */
+.is-mobile button,
+.is-mobile .swiper-slide {
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+/* Otimizar scroll em mobile */
+.is-mobile {
+	/* Hardware acceleration */
+	transform: translateZ(0);
+	-webkit-transform: translateZ(0);
 }
 

@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 
-import slogan from '../assets/slogan.png';
+import slogan from '../assets/slogan.webp';
 
 export default component$(() => {
   return (
@@ -27,14 +27,16 @@ export default component$(() => {
         {/* Logo/Slogan animado */}
         <div class="flex items-center justify-center gap-4 mb-8">
           <div class="relative">
-            <div class="absolute inset-0 bg-gradient-to-r from-[var(--accent)] to-blue-500 blur-2xl opacity-30 rounded-full"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[var(--accent)] to-blue-500 blur-2xl opacity-30 rounded-full slow-connection:hidden"></div>
             <img
               src={slogan}
               class="relative max-w-full h-40 md:h-52 lg:h-64 w-auto object-contain drop-shadow-2xl"
-              alt="MinhaVitrineOnline"
+              alt="MinhaVitrineOnline - Catálogo Digital Automático"
               width="512"
               height="256"
               fetchPriority="high"
+              decoding="async"
+              style="content-visibility: auto;"
             />
           </div>
         </div>
