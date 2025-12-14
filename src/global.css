@@ -93,12 +93,6 @@ img {
 		filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
 	}
 	
-	/* Reduzir complexidade de gradientes em mobile */
-	.is-mobile .bg-gradient-to-br,
-	.is-mobile .bg-gradient-to-r {
-		background: var(--accent);
-	}
-	
 	/* Desabilitar animações complexas em mobile para renderização mais rápida */
 	.is-mobile .slow-connection:hidden {
 		display: none !important;
