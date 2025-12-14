@@ -96,7 +96,7 @@ img {
 	/* Reduzir complexidade de gradientes em mobile */
 	.is-mobile .bg-gradient-to-br,
 	.is-mobile .bg-gradient-to-r {
-		background: var(--page-bg);
+		background: var(--accent);
 	}
 	
 	/* Desabilitar animações complexas em mobile para renderização mais rápida */
