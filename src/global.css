@@ -93,22 +93,10 @@ img {
 		filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
 	}
 	
-	/* Simplificar gradientes em mobile - usar gradientes mais leves */
-	.is-mobile .bg-gradient-to-br {
-		/* Converte gradiente complexo em linear simples */
-		background: linear-gradient(to bottom, var(--accent), var(--accent-600)) !important;
-	}
-	
+	/* Reduzir complexidade de gradientes em mobile */
+	.is-mobile .bg-gradient-to-br,
 	.is-mobile .bg-gradient-to-r {
-		/* Mantém direção mas simplifica */
-		background: linear-gradient(to right, var(--accent), var(--accent-600)) !important;
-	}
-	
-	/* Hardware acceleration para gradientes em mobile */
-	.is-mobile [class*="bg-gradient"] {
-		will-change: auto;
-		transform: translateZ(0);
-		-webkit-transform: translateZ(0);
+		background: var(--page-bg);
 	}
 	
 	/* Desabilitar animações complexas em mobile para renderização mais rápida */
