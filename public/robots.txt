@@ -13,8 +13,8 @@ Allow: /*.js
 Disallow: /server/
 Disallow: /*.map
 
-# Sitemap (atualizar com URL real quando disponível)
-Sitemap: https://tiago-marques.github.io/magichub-landpage/sitemap.xml
+# Sitemap
+Sitemap: https://minhavitrineonline.com.br/sitemap.xml
 
 # Crawl-delay para ser gentil com o servidor
 Crawl-delay: 1

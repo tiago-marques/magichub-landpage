@@ -21,7 +21,7 @@ errorOnDuplicatesPkgDeps(devDependencies, dependencies);
  */
 export default defineConfig(({ command, mode }): UserConfig => {
   return {
-    base: mode === 'production' ? '/magichub-landpage/' : '/',
+    base: '/',
     plugins: [qwikCity(), qwikVite(), tsconfigPaths({ root: "." })],
     
     // Otimizações de build para produção
