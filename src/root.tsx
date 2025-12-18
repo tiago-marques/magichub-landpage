@@ -22,7 +22,7 @@ export default component$(() => {
         <link rel="preload" as="image" href="/assets/slogan.webp" fetchPriority="high" />
         {/* Preload do logo para reduzir CLS */}
         <link rel="preload" as="image" href="/assets/logo.webp" fetchPriority="high" />
-        {/* Otimização de fontes: preconnect + dns-prefetch + font-display:swap */
+        {/* Otimização de fontes: preconnect + dns-prefetch + font-display:swap */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -94,7 +94,7 @@ export default component$(() => {
           <script dangerouslySetInnerHTML={`
             if ('serviceWorker' in navigator) {
               window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/magichub-landpage/sw.js').catch(function(){});
+                navigator.serviceWorker.register('/sw.js').catch(function(){});
               });
             }
             
