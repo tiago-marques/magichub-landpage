@@ -6,7 +6,7 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://tiago-marques.github.io/magichub-landpage/</loc>
+    <loc>https://tiagomarques.com.br/magichub-landpage/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,28 +14,28 @@
   
   <!-- Seções âncoras (para melhor indexação) -->
   <url>
-    <loc>https://tiago-marques.github.io/magichub-landpage/#problema</loc>
+    <loc>https://tiagomarques.com.br/magichub-landpage/#problema</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://tiago-marques.github.io/magichub-landpage/#solucao</loc>
+    <loc>https://tiagomarques.com.br/magichub-landpage/#solucao</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://tiago-marques.github.io/magichub-landpage/#beneficios</loc>
+    <loc>https://tiagomarques.com.br/magichub-landpage/#beneficios</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://tiago-marques.github.io/magichub-landpage/#oferta</loc>
+    <loc>https://tiagomarques.com.br/magichub-landpage/#oferta</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
