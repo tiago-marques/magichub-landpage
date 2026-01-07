@@ -20,8 +20,13 @@ errorOnDuplicatesPkgDeps(devDependencies, dependencies);
  * Note that Vite normally starts from `index.html` but the qwikCity plugin makes start at `src/entry.ssr.tsx` instead.
  */
 export default defineConfig(({ command, mode }): UserConfig => {
+  // Use variável de ambiente para definir base path
+  // VITE_BASE_PATH='/' para domínio customizado
+  // VITE_BASE_PATH='/magichub-landpage/' para GitHub Pages
+  const basePath = process.env.VITE_BASE_PATH || (mode === 'production' ? '/magichub-landpage/' : '/');
+  
   return {
-    base: '/',
+    base: basePath,
     plugins: [qwikCity(), qwikVite(), tsconfigPaths({ root: "." })],
     
     // Otimizações de build para produção

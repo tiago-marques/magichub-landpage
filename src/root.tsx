@@ -19,9 +19,9 @@ export default component$(() => {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Preload da imagem hero para melhorar LCP mobile */}
-        <link rel="preload" as="image" href="/assets/slogan.webp" fetchPriority="high" />
+        <link rel="preload" as="image" href={`${import.meta.env.BASE_URL}assets/slogan.webp`} fetchPriority="high" />
         {/* Preload do logo para reduzir CLS */}
-        <link rel="preload" as="image" href="/assets/logo.webp" fetchPriority="high" />
+        <link rel="preload" as="image" href={`${import.meta.env.BASE_URL}assets/logo.webp`} fetchPriority="high" />
         {/* Otimização de fontes: preconnect + dns-prefetch + font-display:swap */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
@@ -94,7 +94,7 @@ export default component$(() => {
           <script dangerouslySetInnerHTML={`
             if ('serviceWorker' in navigator) {
               window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/sw.js').catch(function(){});
+                navigator.serviceWorker.register('${import.meta.env.BASE_URL}sw.js').catch(function(){});
               });
             }
             
