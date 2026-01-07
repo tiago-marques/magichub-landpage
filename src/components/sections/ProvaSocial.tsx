@@ -4,6 +4,7 @@ import Testimonial from '../Testimonial';
 
 export default component$(() => {
   const swiperContainer = useSignal<HTMLElement>();
+  const swiperReady = useSignal(false);
   
   const testimonials = [
     {
@@ -32,6 +33,9 @@ export default component$(() => {
   useVisibleTask$(async () => {
     if (swiperContainer.value) {
       try {
+        // Aguarda um pouco para garantir que o CSS do Swiper foi carregado
+        await new Promise(resolve => setTimeout(resolve, 100));
+        
         const { default: Swiper } = await import('swiper');
         const { Autoplay, Pagination, EffectCoverflow } = await import('swiper/modules');
         
@@ -87,8 +91,11 @@ export default component$(() => {
             },
           },
         });
+        swiperReady.value = true;
       } catch (error) {
         console.error('Erro ao inicializar Swiper:', error);
+        // Em caso de erro, mostra o fallback
+        swiperReady.value = false;
       }
     }
   });

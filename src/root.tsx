@@ -54,29 +54,10 @@ export default component$(() => {
           .container{max-width:72rem;margin:0 auto;padding:0 1.5rem}
           @media(max-width:768px){.is-mobile svg{will-change:auto}.is-mobile .backdrop-blur-md{backdrop-filter:none;background:rgba(255,255,255,0.95)}}
         `} />
-        {/* Swiper CSS - carregado via CDN, adiado em mobile para melhorar Speed Index */}
-        <link 
-          rel="preload"
-          as="style"
-          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-          media="(min-width: 769px)"
-          onLoad$={() => {
-            const link = document.querySelector('link[as="style"][href*="swiper"]');
-            if (link) link.setAttribute('rel', 'stylesheet');
-          }}
-        />
+        {/* Swiper CSS - carregado de forma síncrona para garantir que os testimonials funcionem */}
         <link 
           rel="stylesheet" 
-          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-          media="print"
-          onLoad$={() => {
-            const link = document.querySelectorAll('link[href*="swiper"]')[1];
-            if (link && window.innerWidth <= 768) {
-              setTimeout(() => link.setAttribute('media', 'all'), 1000);
-            } else if (link) {
-              link.setAttribute('media', 'all');
-            }
-          }}
+          href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
         />
         {!isDev && (
           <link
