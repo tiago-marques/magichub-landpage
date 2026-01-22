@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 
-import slogan from '../assets/slogan.webp';
+import slogan from '../assets/logo-512.png';
 
 export default component$(() => {
   return (

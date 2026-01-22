@@ -1,8 +1,8 @@
 import { component$, Slot, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 
 export default component$(({ title, id, fullScreen = false }: any) => {
-  const sectionClass = `section relative ${fullScreen ? 'min-h-screen flex items-center' : ''}`.trim();
-  const containerClass = `container max-w-5xl ${fullScreen ? 'h-full flex flex-col justify-center' : ''}`.trim();
+  const sectionClass = `section relative ${fullScreen ? 'py-20 md:py-16 flex items-center' : ''}`.trim();
+  const containerClass = `container max-w-5xl ${fullScreen ? 'flex flex-col justify-center' : ''}`.trim();
   const sectionRef = useSignal<HTMLElement>();
 
   // eslint-disable-next-line qwik/no-use-visible-task

@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-import LogoPng from '../assets/logo.webp';
+import IconPng from '../assets/icon-512.png';
 //Como funciona | Benefícios | Quem já usa
 export default component$(() => {
   return (
@@ -11,7 +11,7 @@ export default component$(() => {
           <div class="relative">
             <div class="absolute inset-0 bg-[var(--accent)]/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
             {/* Dimensões explícitas para evitar Layout Shift (CLS) */}
-            <img src={LogoPng} class="h-12 w-12 md:h-14 md:w-14 object-contain relative transition-transform duration-300 group-hover:scale-105" alt="MinhaVitrineOnline" width="56" height="56" fetchPriority="high" decoding="async" style="aspect-ratio: 1/1;" />
+            <img src={IconPng} class="h-12 w-12 md:h-14 md:w-14 object-contain relative transition-transform duration-300 group-hover:scale-105" alt="MinhaVitrineOnline" width="56" height="56" fetchPriority="high" decoding="async" style="aspect-ratio: 1/1;" />
           </div>
         </a>
         
