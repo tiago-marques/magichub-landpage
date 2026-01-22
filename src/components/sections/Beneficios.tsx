@@ -2,7 +2,7 @@ import { component$ } from '@builder.io/qwik';
 import Section from '../Section';
 
 export default component$(() => (
-    <Section id="beneficios" fullScreen>
+    <Section id="beneficios">
         <div class="absolute inset-0 overflow-hidden opacity-35 pointer-events-none">
           <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>

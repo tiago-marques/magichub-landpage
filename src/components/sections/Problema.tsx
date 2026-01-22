@@ -15,7 +15,7 @@ export default component$(() => {
   ];
 
   return (
-    <Section id="problema" fullScreen>
+    <Section id="problema">
       <div class="absolute inset-0 overflow-hidden opacity-35 pointer-events-none">
         <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>

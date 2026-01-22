@@ -101,7 +101,7 @@ export default component$(() => {
   });
 
   return (
-    <Section id="prova-social" fullScreen>
+    <Section id="prova-social">
       <div class="absolute inset-0 overflow-hidden opacity-35 pointer-events-none">
         <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -116,10 +116,29 @@ export default component$(() => {
           </g>
         </svg>
       </div>
-      <h2 class="text-3xl font-bold mb-4 text-center animate-fade-in relative z-10">O que nossos clientes dizem</h2>
-      <p class="text-center mb-8 text-[var(--muted)] animate-fade-in-delay">
-        Pequenas lojas como a sua já estão usando a minhavitrineonline para entrar no digital de forma simples.
-      </p>
+      {/* Metrics row - visible quantitative social proof */}
+      <div class="grid grid-cols-3 gap-4 md:gap-8 mb-16 max-w-2xl mx-auto relative z-10">
+        <div class="text-center animate-fade-in">
+          <div class="text-3xl md:text-4xl font-bold text-[var(--accent)]">500+</div>
+          <p class="text-sm md:text-base text-[var(--muted)] mt-2">Lojas ativas</p>
+        </div>
+        <div class="text-center animate-fade-in" style="animation-delay: 0.1s;">
+          <div class="text-3xl md:text-4xl font-bold text-[var(--accent)]">95%</div>
+          <p class="text-sm md:text-base text-[var(--muted)] mt-2">Satisfação</p>
+        </div>
+        <div class="text-center animate-fade-in" style="animation-delay: 0.2s;">
+          <div class="text-3xl md:text-4xl font-bold text-[var(--accent)]">10K+</div>
+          <p class="text-sm md:text-base text-[var(--muted)] mt-2">Produtos online</p>
+        </div>
+      </div>
+
+      {/* Testimonials section heading */}
+      <div class="relative z-10 text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 animate-fade-in">Ouça quem já está vendendo mais</h2>
+        <p class="text-lg text-[var(--muted)] max-w-2xl mx-auto animate-fade-in-delay">
+          Pequenas lojas como a sua já estão transformando suas vendas com a MinhaVitrineOnline
+        </p>
+      </div>
       
       <div class="relative max-w-6xl mx-auto py-8 animate-fade-in-delay" style="animation-delay: 0.6s;">
         {/* Swiper Container */}
