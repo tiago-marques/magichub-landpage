@@ -1,14 +1,12 @@
-import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
+import { component$, useSignal, useEffect$ } from '@builder.io/qwik';
 
 export default component$(() => {
   const showSticky = useSignal(true);
   const stickyRef = useSignal<HTMLDivElement>();
 
   // eslint-disable-next-line qwik/no-use-visible-task
-  useVisibleTask$(() => {
+  useEffect$(() => {
     const handleScroll = () => {
-      if (!stickyRef.value) return;
-
       // Detecta CTAs existentes
       const ctaElements = document.querySelectorAll('[href*="mailto:"]');
       
@@ -24,12 +22,12 @@ export default component$(() => {
       showSticky.value = !hasVisibleCTA;
     };
 
-    // Adiciona event listener e dispara uma vez ao carregar
+    // Adiciona event listener
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Dispara ao carregar
     
     return () => window.removeEventListener('scroll', handleScroll);
-  });
+  }, []);
 
   return (
     <div
