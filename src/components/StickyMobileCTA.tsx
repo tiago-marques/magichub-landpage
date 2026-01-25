@@ -1,11 +1,11 @@
-import { component$, useSignal, useTask$ } from '@builder.io/qwik';
+import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 
 export default component$(() => {
   const showSticky = useSignal(true);
   const stickyRef = useSignal<HTMLDivElement>();
 
   // eslint-disable-next-line qwik/no-use-visible-task
-  useTask$(() => {
+  useVisibleTask$(() => {
     const handleScroll = () => {
       // Detecta CTAs existentes
       const ctaElements = document.querySelectorAll('[href*="mailto:"]');
