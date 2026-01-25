@@ -11,7 +11,7 @@ export default component$(({
     <>
       {/* Vídeo Background apenas dentro do Hero - Desktop only */}
       <div class="hidden md:block absolute inset-0 w-full h-full z-0">
-        <div class="w-full h-full backdrop-blur">
+        <div class="w-full h-full backdrop-blur-md">
           <video
             autoplay
             muted
