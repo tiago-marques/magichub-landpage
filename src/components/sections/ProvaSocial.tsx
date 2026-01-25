@@ -8,23 +8,23 @@ export default component$(() => {
   
   const testimonials = [
     {
-      quote: "Nunca imaginei ter um catálogo online tão rápido. O aumento nas vendas veio muito rápido também.",
+      quote: "A IA encontrou imagens melhores dos meus produtos automaticamente. Os cliques aumentaram muito no Google!",
       author: "Maria Silva - Boutique Fashion"
     },
     {
-      quote: "Em menos de 1 hora minha loja já estava online! Agora meus clientes podem ver meus produtos 24 horas por dia.",
+      quote: "Bastou subir 5 notas fiscais e tudo foi preenchido. A IA detectou EAN, imagens, preços — tudo certo!",
       author: "João Santos - Casa de Calçados"
     },
     {
-      quote: "Simples, rápido e eficiente. Não preciso de conhecimentos técnicos, tudo funciona perfeitamente.",
+      quote: "Achei incrível como em 10 minutos meu catálogo já estava online e pronto para vender. Zero complicação!",
       author: "Ana Costa - Loja de Presentes"
     },
     {
-      quote: "Meus clientes adoraram poder ver o catálogo pelo celular. As vendas aumentaram 40% no primeiro mês!",
+      quote: "Meus clientes podem ver o catálogo pelo WhatsApp 24/7. As vendas aumentaram 40% no primeiro mês!",
       author: "Carlos Oliveira - Pet Shop Amigo Fiel"
     },
     {
-      quote: "Finalmente consigo competir com as grandes lojas. A plataforma é profissional e muito fácil de usar.",
+      quote: "Finalmente consigo competir com as grandes lojas. A IA faz todo o trabalho pesado, eu só vendo!",
       author: "Fernanda Lima - Papelaria Central"
     }
   ];

@@ -29,14 +29,14 @@ export default component$(() => (
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto relative z-10">
-          {/* Catálogo Digital Automático */}
+          {/* IA Enriquece Automático */}
           <div class="bg-white/90 backdrop-blur-sm border border-[var(--accent)]/20 rounded-2xl p-6 hover:border-[var(--accent)]/50 transition-all duration-300 hover:scale-105 animate-fade-in shadow-md">
             <div class="w-16 h-16 mb-4 bg-gradient-to-br from-[var(--accent)] to-[var(--accent-600)] rounded-xl flex items-center justify-center shadow-lg">
-              <span class="text-4xl">📦</span>
+              <span class="text-4xl">🤖</span>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-[var(--text)]">Catálogo Digital Automático</h3>
+            <h3 class="text-xl font-bold mb-3 text-[var(--text)]">IA Enriquece Tudo</h3>
             <p class="text-sm text-[var(--muted)]">
-              Seus produtos organizados e prontos para compartilhar, sem digitação manual
+              Imagens, descrições, EAN, categoria — tudo preenchido automaticamente pela IA
             </p>
           </div>
 
@@ -45,9 +45,9 @@ export default component$(() => (
             <div class="w-16 h-16 mb-4 bg-gradient-to-br from-[var(--accent)] to-[var(--accent-600)] rounded-xl flex items-center justify-center shadow-lg">
               <span class="text-4xl">⏱️</span>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-[var(--text)]">Economia de Horas</h3>
+            <h3 class="text-xl font-bold mb-3 text-[var(--text)]">80% Menos Tempo</h3>
             <p class="text-sm text-[var(--muted)]">
-              Pare de perder tempo com trabalho manual e foque em atender seus clientes
+              Economiza 2 horas por 100 produtos. Foque em vender, não em digitar
             </p>
           </div>
 
@@ -56,9 +56,9 @@ export default component$(() => (
             <div class="w-16 h-16 mb-4 bg-gradient-to-br from-[var(--accent)] to-[var(--accent-600)] rounded-xl flex items-center justify-center shadow-lg">
               <span class="text-4xl">📱</span>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-[var(--text)]">Compartilhe no WhatsApp</h3>
+            <h3 class="text-xl font-bold mb-3 text-[var(--text)]">WhatsApp + Google</h3>
             <p class="text-sm text-[var(--muted)]">
-              Envie seus produtos com um clique para os clientes que já te conhecem
+              Catálogo automático no WhatsApp Business e Google Shopping 24/7
             </p>
           </div>
 
@@ -67,20 +67,20 @@ export default component$(() => (
             <div class="w-16 h-16 mb-4 bg-gradient-to-br from-[var(--accent)] to-[var(--accent-600)] rounded-xl flex items-center justify-center shadow-lg">
               <span class="text-4xl">🌐</span>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-[var(--text)]">Presença Digital Sem Dor de Cabeça</h3>
+            <h3 class="text-xl font-bold mb-3 text-[var(--text)]">Online em 10 Minutos</h3>
             <p class="text-sm text-[var(--muted)]">
-              Apareça online de forma profissional, sem precisar entender de tecnologia
+              Sem conhecimento técnico. Seu catálogo fica pronto para receber vendas imediatamente
             </p>
           </div>
 
-          {/* Fácil de Começar */}
+          {/* Sem Mudar Rotina */}
           <div class="bg-white/90 backdrop-blur-sm border border-[var(--accent)]/20 rounded-2xl p-6 hover:border-[var(--accent)]/50 transition-all duration-300 hover:scale-105 animate-fade-in-delay shadow-md" style="animation-delay: 0.4s;">
             <div class="w-16 h-16 mb-4 bg-gradient-to-br from-[var(--accent)] to-[var(--accent-600)] rounded-xl flex items-center justify-center shadow-lg">
               <span class="text-4xl">🚀</span>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-[var(--text)]">Comece Sem Mudar Sua Rotina</h3>
+            <h3 class="text-xl font-bold mb-3 text-[var(--text)]">Compatível com Seu Negócio</h3>
             <p class="text-sm text-[var(--muted)]">
-              Configure uma vez e funciona automaticamente no seu dia a dia
+              Não precisa mudar nada. Você continua vendendo normalmente, a IA cuida do resto
             </p>
           </div>
 
@@ -89,9 +89,9 @@ export default component$(() => (
             <div class="w-16 h-16 mb-4 bg-gradient-to-br from-[var(--accent)] to-[var(--accent-600)] rounded-xl flex items-center justify-center shadow-lg">
               <span class="text-4xl">💰</span>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-[var(--text)]">Venda Mais, Todo Dia</h3>
+            <h3 class="text-xl font-bold mb-3 text-[var(--text)]">3x Mais Vendas</h3>
             <p class="text-sm text-[var(--muted)]">
-              Aumente suas vendas alcançando clientes que antes você não conseguia atingir
+              Aumento médio de 3x no primeiro mês com IA + Google Shopping ativo
             </p>
           </div>
         </div>

@@ -6,8 +6,10 @@ import Hero from '../components/Hero';
 import Atencao from '../components/sections/Atencao';
 import Problema from '../components/sections/Problema';
 import Solucao from '../components/sections/Solucao';
+import IAEmAcao from '../components/sections/IAEmAcao';
 import Credenciais from '../components/sections/Credenciais';
 import Beneficios from '../components/sections/Beneficios';
+import ResultadosNumeros from '../components/sections/ResultadosNumeros';
 import ProvaSocial from '../components/sections/ProvaSocial';
 import Oferta from '../components/sections/Oferta';
 import Escassez from '../components/sections/Escassez';
@@ -42,8 +44,10 @@ export default component$(() => {
       <Atencao />
       <Problema />
       <Solucao />
+      <IAEmAcao />
       <Credenciais />
       <Beneficios />
+      <ResultadosNumeros />
       <ProvaSocial />
       <Oferta />
       <Escassez />

@@ -25,10 +25,10 @@ export default component$(() => (
         </svg>
       </div>
       <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-[var(--text)]">
-        A <span class="text-[var(--accent)]">Solução</span> é Simples
+        A <span class="text-[var(--accent)]">Solução</span> Usa IA para Funcionar Sozinha
       </h2>
       <p class="text-xl text-[var(--muted)] max-w-3xl mx-auto">
-        A <span class="badge">minhavitrineonline</span> cria seu catálogo digital <span class="font-bold text-[var(--accent)]">automaticamente</span> a partir das suas notas fiscais de vendas
+        <span class="font-bold text-[var(--accent)]">Zero esforço</span> seu — <span class="font-bold text-[var(--accent)]">máximo resultado</span> para suas vendas
       </p>
     </div>
 

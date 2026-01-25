@@ -54,13 +54,13 @@ export default component$(() => {
         {/* Primary CTA - Single, clear action */}
         <div class="mb-8 flex justify-center">
           <a
-            href="mailto:contato@minhavitrineonline.com.br?subject=Agendar%20demo%20minhavitrineonline"
+            href="mailto:contato@minhavitrineonline.com.br?subject=Ver%20IA%20em%20acao%20minhavitrineonline"
             class="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[var(--accent)] to-blue-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
             </svg>
-            <span>Agendar demo grátis</span>
+            <span>Ver a IA funcionando (15 min)</span>
             <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
             </svg>
