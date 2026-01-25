@@ -103,7 +103,7 @@ export default component$(() => {
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
         </svg>
       </a>
-      <div class="text-xs text-[var(--muted)] mt-4 mx-auto space-y-1">
+      <div class="text-xs text-[var(--muted)] mt-4 flex flex-col items-center space-y-1">
         <p>🔒 Sem compromisso</p>
         <p>Cadastro leva menos de 1 minuto</p>
       </div>
