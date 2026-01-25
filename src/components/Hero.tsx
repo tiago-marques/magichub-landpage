@@ -68,9 +68,10 @@ export default component$(() => {
         </div>
 
         {/* Microcopy to reduce friction */}
-        <p class="text-sm text-gray-600 mb-8 mx-auto">
-          ✓ Sem compromisso • ✓ 15 minutos • ✓ Suporte incluído
-        </p>
+        <div class="text-sm text-gray-600 mb-8 mx-auto space-y-1">
+          <p>✓ Sem compromisso • ✓ 15 minutos</p>
+          <p>✓ Suporte incluído</p>
+        </div>
       </div>
 
       {/* Scroll indicator */}

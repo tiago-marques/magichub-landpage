@@ -24,7 +24,10 @@ export default component$(() => {
       showSticky.value = !hasVisibleCTA;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Adiciona event listener e dispara uma vez ao carregar
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Dispara ao carregar
+    
     return () => window.removeEventListener('scroll', handleScroll);
   });
 
