@@ -7,7 +7,7 @@ export default component$(() => {
   return (
     <header class="relative bg-gradient-to-br from-slate-50 via-blue-50 to-white overflow-hidden min-h-screen flex items-center">
       {/* Video Background via VideoHero component */}
-      <VideoHero fallbackSrc={slogan} />
+      <VideoHero />
 
       {/* Background Pattern - Oculto em mobile para melhorar Speed Index */}
       <div class="hidden md:block absolute inset-0 overflow-hidden opacity-20 pointer-events-none">
