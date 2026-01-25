@@ -1,11 +1,11 @@
-import { component$, useSignal, useEffect$ } from '@builder.io/qwik';
+import { component$, useSignal, useTask$ } from '@builder.io/qwik';
 
 export default component$(() => {
   const showSticky = useSignal(true);
   const stickyRef = useSignal<HTMLDivElement>();
 
   // eslint-disable-next-line qwik/no-use-visible-task
-  useEffect$(() => {
+  useTask$(() => {
     const handleScroll = () => {
       // Detecta CTAs existentes
       const ctaElements = document.querySelectorAll('[href*="mailto:"]');
@@ -27,7 +27,7 @@ export default component$(() => {
     handleScroll(); // Dispara ao carregar
     
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  });
 
   return (
     <div
