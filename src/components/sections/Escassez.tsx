@@ -96,14 +96,14 @@ export default component$(() => {
       </div>
     </div>
     
-    <div class="w-full text-center animate-fade-in-delay relative z-10" style="animation-delay: 0.6s;">
+    <div class="text-center animate-fade-in-delay relative z-10" style="animation-delay: 0.6s;">
       <a href="mailto:contato@minhavitrineonline.com.br?subject=Quero%20ser%20early%20adopter" class="btn-primary group">
         <span class="font-extrabold">Garantir Minha Vaga Agora</span>
         <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
         </svg>
       </a>
-      <p class="text-xs text-[var(--muted)] mt-3">🔒 Sem compromisso • Cadastro leva menos de 1 minuto</p>
+      <p class="text-xs text-[var(--muted)] mt-3 mx-auto">🔒 Sem compromisso • Cadastro leva menos de 1 minuto</p>
     </div>
   </Section>
   );
