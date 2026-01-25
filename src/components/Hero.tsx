@@ -70,7 +70,7 @@ export default component$(() => {
         {/* Microcopy to reduce friction */}
         <div class="text-sm text-gray-600 mb-8 flex flex-col items-center space-y-1">
           <p>✓ Sem compromisso • ✓ 15 minutos</p>
-          <p>✓ Suporte incluído</p>
+          <p>✓ Suporte</p>
         </div>
       </div>
 
