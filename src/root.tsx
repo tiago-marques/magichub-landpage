@@ -2,6 +2,7 @@ import { component$, isDev } from "@builder.io/qwik";
 import { QwikCityProvider, RouterOutlet } from "@builder.io/qwik-city";
 import { RouterHead } from "./components/router-head/router-head";
 import FloatingNav from './components/FloatingNav';
+import StickyMobileCTA from './components/StickyMobileCTA';
 
 import "./global.css";
 
@@ -70,6 +71,7 @@ export default component$(() => {
       <body lang="pt-BR" class="font-sans">
         <RouterOutlet />
         <FloatingNav />
+        <StickyMobileCTA />
         {/* Service Worker registration - apenas em produção */}
         {!isDev && (
           <script dangerouslySetInnerHTML={`

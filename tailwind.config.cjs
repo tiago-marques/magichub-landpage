@@ -11,6 +11,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto']
+      },
+      padding: {
+        'safe-area-inset-bottom': 'env(safe-area-inset-bottom)'
       }
     }
   },
