@@ -29,7 +29,7 @@ export default component$(() => (
         </p>
       </div>
       
-      <div class="inline-block animate-pulse-soft">
+      <div class="w-full flex justify-center">
         <a 
           href="mailto:contato@minhavitrineonline.com.br?subject=Ver%20IA%20em%20acao%20minhavitrineonline" 
           class="btn-primary-cta group inline-flex items-center gap-3 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
@@ -41,7 +41,7 @@ export default component$(() => (
         </a>
       </div>
       
-      <p class="mt-8 text-center text-sm text-[var(--muted)] animate-fade-in-delay">
+      <p class="w-full mt-8 text-center text-sm text-[var(--muted)] animate-fade-in-delay">
         ✓ Até 50 produtos grátis • ✓ Sem cartão • ✓ Suporte
       </p>
     </div>
