@@ -27,7 +27,10 @@ export default component$(() => {
         </svg>
       </div>
 
-      <div class="max-w-6xl mx-auto px-6 sm:px-12 py-16 md:py-20 text-center relative z-10">
+      {/* Sombra gradiente expandida atrás de todo o conteúdo da Hero (desktop) */}
+      <div class="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[420px] bg-gradient-to-r from-[var(--accent)] to-blue-500 blur-2xl opacity-30 rounded-full z-10 pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-6 sm:px-12 py-16 md:py-20 text-center relative z-20">
         {/* Logo/Slogan animado com vídeo */}
         <div class="flex items-center justify-center gap-4 mb-8">
           <div class="relative max-w-full w-full" style="max-width: 512px;">
@@ -81,7 +84,7 @@ export default component$(() => {
 
       {/* Scroll indicator */}
       <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <svg class="w-6 h-6 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
         </svg>
       </div>
