@@ -41,8 +41,8 @@ export default component$(() => (
         </a>
       </div>
       
-      <p class="mt-8 text-sm text-[var(--muted)] animate-fade-in-delay">
-        ✓ Até 50 produtos grátis • ✓ Sem cartão • ✓ Suporte 24h
+      <p class="mt-8 text-center text-sm text-[var(--muted)] animate-fade-in-delay">
+        ✓ Até 50 produtos grátis • ✓ Sem cartão • ✓ Suporte
       </p>
     </div>
   </Section>
