@@ -9,23 +9,28 @@ export default component$(() => {
   const testimonials = [
     {
       quote: "A IA encontrou imagens melhores dos meus produtos automaticamente. Os cliques aumentaram muito no Google!",
-      author: "Maria Silva - Boutique Fashion"
+      author: "Maria Silva - Boutique Fashion",
+      avatar: "https://pravatar.cc/150?img=1&u=maria-silva"
     },
     {
       quote: "Bastou subir 5 notas fiscais e tudo foi preenchido. A IA detectou EAN, imagens, preços — tudo certo!",
-      author: "João Santos - Casa de Calçados"
+      author: "João Santos - Casa de Calçados",
+      avatar: "https://pravatar.cc/150?img=2&u=joao-santos"
     },
     {
       quote: "Achei incrível como em 10 minutos meu catálogo já estava online e pronto para vender. Zero complicação!",
-      author: "Ana Costa - Loja de Presentes"
+      author: "Ana Costa - Loja de Presentes",
+      avatar: "https://pravatar.cc/150?img=3&u=ana-costa"
     },
     {
       quote: "Meus clientes podem ver o catálogo pelo WhatsApp 24/7. As vendas aumentaram 40% no primeiro mês!",
-      author: "Carlos Oliveira - Pet Shop Amigo Fiel"
+      author: "Carlos Oliveira - Pet Shop Amigo Fiel",
+      avatar: "https://pravatar.cc/150?img=4&u=carlos-oliveira"
     },
     {
       quote: "Finalmente consigo competir com as grandes lojas. A IA faz todo o trabalho pesado, eu só vendo!",
-      author: "Fernanda Lima - Papelaria Central"
+      author: "Fernanda Lima - Papelaria Central",
+      avatar: "https://pravatar.cc/150?img=5&u=fernanda-lima"
     }
   ];
 
@@ -148,7 +153,8 @@ export default component$(() => {
               <div key={index} class="swiper-slide">
                 <Testimonial 
                   quote={testimonial.quote} 
-                  author={testimonial.author} 
+                  author={testimonial.author}
+                  avatar={testimonial.avatar}
                 />
               </div>
             ))}
@@ -163,7 +169,8 @@ export default component$(() => {
               <Testimonial 
                 key={index}
                 quote={testimonial.quote} 
-                author={testimonial.author} 
+                author={testimonial.author}
+                avatar={testimonial.avatar}
               />
             ))}
           </div>
