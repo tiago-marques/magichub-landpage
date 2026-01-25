@@ -68,9 +68,11 @@ export default component$(() => {
         </div>
 
         {/* Microcopy to reduce friction */}
-        <p class="text-center text-sm text-gray-600 mb-8">
-          ✓ Sem compromisso • ✓ 15 minutos • ✓ Suporte incluído
-        </p>
+        <div class="w-full flex justify-center">
+          <p class="text-center text-sm text-gray-600 mb-8">
+            ✓ Sem compromisso • ✓ 15 minutos • ✓ Suporte incluído
+          </p>
+        </div>
       </div>
 
       {/* Scroll indicator */}
