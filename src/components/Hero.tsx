@@ -1,6 +1,7 @@
 import { component$ } from '@builder.io/qwik';
 
 import slogan from '../assets/logo-512.png';
+import VideoHero from './VideoHero';
 
 export default component$(() => {
   return (
@@ -24,21 +25,9 @@ export default component$(() => {
       </div>
 
       <div class="max-w-6xl mx-auto px-6 sm:px-12 py-16 md:py-20 text-center relative z-10">
-        {/* Logo/Slogan animado */}
+        {/* Logo/Slogan animado com vídeo */}
         <div class="flex items-center justify-center gap-4 mb-8">
-          <div class="relative" style="max-width: 512px; width: 100%;">
-            <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-[var(--accent)] to-blue-500 blur-2xl opacity-30 rounded-full slow-connection:hidden"></div>
-            <img
-              src={slogan}
-              class="hero-img relative max-w-full w-full h-auto object-contain drop-shadow-2xl"
-              alt="MinhaVitrineOnline"
-              width="512"
-              height="256"
-              fetchPriority="high"
-              decoding="async"
-              style="aspect-ratio: 2/1; content-visibility: auto;"
-            />
-          </div>
+          <VideoHero fallbackSrc={slogan} />
         </div>
 
         {/* H1 Principal - Focused on outcome, not feature */}
