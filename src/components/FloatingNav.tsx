@@ -65,8 +65,7 @@ export default component$(() => {
     <button
       onClick$={handleClick}
       aria-label={isLast() ? 'Ir ao topo' : 'Ir para próxima seção'}
-      class="fixed right-4 bottom-4 sm:right-6 sm:bottom-6 z-50 w-14 h-14 sm:w-12 sm:h-12 rounded-full text-white shadow-lg flex items-center justify-center hover:scale-105 transition-transform touch-manipulation"
-      style={{ background: 'var(--accent-600)', touchAction: 'manipulation' }}
+      class="fixed right-4 bottom-4 sm:right-6 sm:bottom-6 z-50 w-14 h-14 sm:w-12 sm:h-12 rounded-full text-white shadow-lg flex items-center justify-center bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 hover:scale-105 transition-all touch-manipulation"
       title={isLast() ? 'Topo' : 'Próxima seção'}
     >
       {isLast() ? (

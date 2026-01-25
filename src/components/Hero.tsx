@@ -28,7 +28,7 @@ export default component$(() => {
       </div>
 
       {/* Sombra gradiente expandida atrás de todo o conteúdo da Hero (desktop) */}
-      <div class="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[420px] bg-gradient-to-r from-[var(--accent)] to-blue-500 blur-2xl opacity-30 rounded-full z-10 pointer-events-none"></div>
+      <div class="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[600px] bg-gradient-to-r from-[var(--accent)] to-blue-500 blur-3xl opacity-30 rounded-full z-10 pointer-events-none"></div>
 
       <div class="max-w-6xl mx-auto px-6 sm:px-12 py-16 md:py-20 text-center relative z-20">
         {/* Logo/Slogan animado com vídeo */}
@@ -55,7 +55,7 @@ export default component$(() => {
         </h1>
 
         {/* Subheadline - Who is this for + Problem solved */}
-        <p class="text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed text-gray-600 md:text-white/90 md:drop-shadow-[0_8px_16px_rgba(0,196,204,0.85)] md:drop-shadow-[0_25px_25px_rgba(59,130,246,0.55)]">
+        <p class="text-lg font-bold md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed text-gray-600 md:text-white/90 md:drop-shadow-[0_8px_16px_rgba(0,196,204,0.85)] md:drop-shadow-[0_25px_25px_rgba(59,130,246,0.55)]">
           Para pequenos lojistas que querem aparecer no Google e vender sem complicação
         </p>
 
@@ -76,7 +76,7 @@ export default component$(() => {
         </div>
 
         {/* Microcopy to reduce friction */}
-        <div class="text-sm mb-8 flex flex-col items-center space-y-1 text-gray-600 md:text-white/80 md:drop-shadow-[0_8px_16px_rgba(0,196,204,0.85)] md:drop-shadow-[0_25px_25px_rgba(59,130,246,0.55)]">
+        <div class="font-bold text-sm mb-8 flex flex-col items-center space-y-1 text-gray-600 md:text-white/80 md:drop-shadow-[0_8px_16px_rgba(0,196,204,0.85)] md:drop-shadow-[0_25px_25px_rgba(59,130,246,0.55)]">
           <p>✓ Sem compromisso • ✓ 15 minutos</p>
           <p>✓ Suporte</p>
         </div>

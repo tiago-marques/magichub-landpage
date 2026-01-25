@@ -27,7 +27,8 @@ export default component$(() => (
         </svg>
       </div>
       <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-[var(--text)]">
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-[var(--accent)]">Inteligência Artificial</span> Fazendo o Trabalho por Você
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-[var(--accent)]">Inteligência Artificial</span><br/>
+        Fazendo o Trabalho por Você
       </h2>
       <p class="text-xl text-[var(--muted)] max-w-3xl mx-auto">
         Enquanto você atende seus clientes, a IA enriquece seu catálogo automaticamente em segundos
