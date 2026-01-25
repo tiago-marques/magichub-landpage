@@ -14,9 +14,29 @@ export default component$(({
   const videoLoaded = useSignal(false);
 
   return (
-    <div class="relative max-w-full w-full" style="max-width: 512px;">
-      <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-[var(--accent)] to-blue-500 blur-2xl opacity-30 rounded-full slow-connection:hidden"></div>
-      
+    <>
+      {/* Vídeo Fullscreen Background - Desktop only */}
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="hidden md:block fixed top-0 left-0 w-screen h-screen object-cover -z-20"
+        style="content-visibility: auto;"
+        preload="metadata"
+        onCanPlay$={() => {
+          videoLoaded.value = true;
+        }}
+        onError$={() => {
+          videoLoaded.value = false;
+        }}
+      >
+        <source src={videoSrc} type="video/mp4" />
+      </video>
+
+      {/* Blur Overlay - Desktop only */}
+      <div class="hidden md:block fixed top-0 left-0 w-screen h-screen bg-black/20 backdrop-blur-sm -z-10"></div>
+
       {/* Logo - Esconde quando vídeo carregar (desktop only) */}
       <img
         src={fallbackSrc}
@@ -28,32 +48,12 @@ export default component$(({
           aspectRatio: '2/1',
           contentVisibility: 'auto',
           visibility: videoLoaded.value ? 'hidden' : 'visible',
+          maxWidth: '512px',
         }}
         fetchPriority="high"
         decoding="async"
       />
-
-      {/* Vídeo - Desktop only, sobrepõe logo */}
-      <video
-        width="512"
-        height="256"
-        autoplay
-        muted
-        loop
-        playsinline
-        class="hidden md:block max-w-full w-full h-auto object-contain drop-shadow-2xl rounded-xl"
-        style="aspect-ratio: 2/1; content-visibility: auto; position: absolute; inset: 0;"
-        preload="metadata"
-        onCanPlay$={() => {
-          videoLoaded.value = true;
-        }}
-        onError$={() => {
-          videoLoaded.value = false;
-        }}
-      >
-        <source src={videoSrc} type="video/mp4" />
-      </video>
-    </div>
+    </>
   );
 });
 

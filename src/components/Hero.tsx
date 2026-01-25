@@ -6,6 +6,9 @@ import VideoHero from './VideoHero';
 export default component$(() => {
   return (
     <header class="relative bg-gradient-to-br from-slate-50 via-blue-50 to-white overflow-hidden min-h-screen flex items-center">
+      {/* Video Background via VideoHero component */}
+      <VideoHero fallbackSrc={slogan} />
+
       {/* Background Pattern - Oculto em mobile para melhorar Speed Index */}
       <div class="hidden md:block absolute inset-0 overflow-hidden opacity-20 pointer-events-none">
         <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +30,19 @@ export default component$(() => {
       <div class="max-w-6xl mx-auto px-6 sm:px-12 py-16 md:py-20 text-center relative z-10">
         {/* Logo/Slogan animado com vídeo */}
         <div class="flex items-center justify-center gap-4 mb-8">
-          <VideoHero fallbackSrc={slogan} />
+          <div class="relative max-w-full w-full" style="max-width: 512px;">
+            <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-[var(--accent)] to-blue-500 blur-2xl opacity-30 rounded-full slow-connection:hidden"></div>
+            <img
+              src={slogan}
+              class="hero-img max-w-full w-full h-auto object-contain drop-shadow-2xl"
+              alt="MinhaVitrineOnline"
+              width="512"
+              height="256"
+              fetchPriority="high"
+              decoding="async"
+              style="aspect-ratio: 2/1; content-visibility: auto;"
+            />
+          </div>
         </div>
 
         {/* H1 Principal - Focused on outcome, not feature */}
