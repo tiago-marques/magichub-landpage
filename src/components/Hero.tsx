@@ -46,12 +46,13 @@ export default component$(() => {
         </div>
 
         {/* H1 Principal - Focused on outcome, not feature */}
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight text-gray-900 md:text-white">
+
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight text-gray-900 md:text-white md:drop-shadow-[0_4px_32px_rgba(59,130,246,0.45)]">
           Venda mais com seu catálogo digital
         </h1>
 
         {/* Subheadline - Who is this for + Problem solved */}
-        <p class="text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed text-gray-600 md:text-white/90">
+        <p class="text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed text-gray-600 md:text-white/90 md:drop-shadow-[0_4px_32px_rgba(59,130,246,0.45)]">
           Para pequenos lojistas que querem aparecer no Google e vender sem complicação
         </p>
 
@@ -72,7 +73,7 @@ export default component$(() => {
         </div>
 
         {/* Microcopy to reduce friction */}
-        <div class="text-sm mb-8 flex flex-col items-center space-y-1 text-gray-600 md:text-white/80">
+        <div class="text-sm mb-8 flex flex-col items-center space-y-1 text-gray-600 md:text-white/80 md:drop-shadow-[0_4px_32px_rgba(59,130,246,0.45)]">
           <p>✓ Sem compromisso • ✓ 15 minutos</p>
           <p>✓ Suporte</p>
         </div>
