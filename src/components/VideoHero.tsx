@@ -22,8 +22,8 @@ export default component$(({
         <source src={videoSrc} type="video/mp4" />
       </video>
 
-      {/* Overlay branco translúcido para clarear o fundo */}
-      <div class="hidden md:block fixed top-0 left-0 w-screen h-screen bg-white/50 backdrop-blur-sm z-10 pointer-events-none"></div>
+      {/* Overlay branco translúcido para clarear o fundo, blur mais leve */}
+      <div class="hidden md:block fixed top-0 left-0 w-screen h-screen bg-white/50 backdrop-blur z-10 pointer-events-none"></div>
     </>
   );
 });
