@@ -102,9 +102,8 @@ export default component$(() => {
               Se você tiver dúvidas sobre esta Política de Privacidade ou desejar exercer seus direitos, entre em contato conosco:
             </p>
             <div class="mt-4 p-4 bg-gray-100 rounded-lg">
-              <p><strong>Email:</strong> privacidade@magichub.com</p>
-              <p><strong>Endereço:</strong> [Seu endereço aqui]</p>
-              <p><strong>Telefone:</strong> [Seu telefone aqui]</p>
+              <p><strong>Email:</strong> contato@minhavitrineonline.com.br</p>
+              <p><strong>Endereço:</strong> Rua Marco Polo 1029, Curitiba - Paraná</p>
             </div>
           </section>
 

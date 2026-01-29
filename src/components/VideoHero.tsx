@@ -4,8 +4,8 @@ interface VideoHeroProps {
   videoSrc?: string;
 }
 
-export default component$(({ 
-  videoSrc = '/magichub-landpage/videos/hero-demo.mp4'
+export default component$(({
+  videoSrc = '/videos/hero-demo.mp4'
 }: VideoHeroProps) => {
   return (
     <>
